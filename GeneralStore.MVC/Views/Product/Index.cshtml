@@ -6,6 +6,11 @@
 
 <h2>List of Products</h2>
 
+@Html.ActionLink("Create Product", "Create")
+
+
+
+
 <table>
     <tr>
         <th>
@@ -38,6 +43,11 @@
             <td></td>
             <td>
                 @Html.DisplayFor(prductModel => product.IsFood)
+            </td>
+            <td>
+                @Html.ActionLink("Modify", "Edit", new { id = product.ProductID }) |
+                @Html.ActionLink("More Info", "Detail", new { id = product.ProductID }) |
+                @Html.ActionLink("Remove", "Delete", new { id = product.ProductID })
             </td>
             <td></td>
         </tr>
